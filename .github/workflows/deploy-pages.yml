@@ -25,7 +25,8 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        # 'npm install' works when package-lock.json is missing.
+        run: npm install
 
       - name: Build
         run: npm run build
